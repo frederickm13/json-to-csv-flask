@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1>JSON CSV Converter</h1>
+<form>
+    <div class="form-group row">
+        <div class="col-md">
+            <textarea id="sourceText" name="sourceText" rows=25 class="form-control" placeholder="Input source text here . . ."></textarea>
+        </div>
+        <div class="col-md">
+            <textarea id="targetText" name="sourceText" rows=25 class="form-control" placeholder="Target text will output here . . ."></textarea>
+        </div>
+    </div>
+    <div class="form-group row text-center">
+        <div class="col-md">
+            <select id="sourceDataType" class="form-control">
+                <option value="0">Choose source format</option>
+                <option value="1">JSON</option>
+                <option value="2">CSV</option>
+            </select>
+        </div>
+        <div class="col-md">
+            <button class="btn btn-primary" id="convertButton" type="button">Convert</button>
+        </div>
+        <div class="col-md">
+            <select id="targetDataType" class="form-control" disabled>
+                <option value="0">Target format will auto set</option>
+                <option value="1">JSON</option>
+                <option value="2">CSV</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<script src="/static/scripts/index.js"></script>
+{% endblock %}
